@@ -1,0 +1,37 @@
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.collections.FXCollections?>
+<?import java.lang.String?>
+
+<VBox alignment="CENTER" prefHeight="186.0" prefWidth="239.0" spacing="20.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <HBox>
+        <Label text="Select language: ">
+        </Label>
+        <ComboBox fx:id="options" layoutX="15.0" layoutY="33.0" prefWidth="90.0" promptText="Select" onAction="#switchLanguage">
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="English" />
+                    <String fx:value="Farsi" />
+                    <String fx:value="Japanese" />
+                </FXCollections>
+            </items>
+        </ComboBox>
+    </HBox>
+    <HBox>
+        <Label fx:id="fName" text="Name: "></Label>
+        <TextField fx:id="fNameInput"></TextField>
+    </HBox>
+    <HBox>
+        <Label fx:id="lName" text="Lastname: "></Label>
+        <TextField fx:id="lNameInput"></TextField>
+    </HBox>
+    <HBox>
+        <Label fx:id="email" text="Email: "></Label>
+        <TextField fx:id="emailInput"></TextField>
+    </HBox>
+    <Button fx:id="saveButton" onAction="#onSave" text="Save" />
+</VBox>
